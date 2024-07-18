@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link rel="stylesheet" href="css/layout.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+</head>
+<body>
+
+    <div class="layout clearfix">
+
+        <div class="sidebar layout__item--25-percent  layout__item--floated-left"> <!-- Sidebar start -->
+
+            <div class="sidebar-header">
+                <input type="search" name="search" class="search-field" placeholder="keresés...">
+                <form action="search"><i class="fa-solid fa-magnifying-glass" id="search-icon"></i></form>
+            </div>
+
+            <ul class="sidebar--contact-list">
+
+                <li class="user-card clearfix active">
+                    <img src="assets/user_avatars/user_avatar_01.png" alt="user avatar" class="avatar layout__item--floated-left">
+                    <div class="user-data">
+                        <h6 class="user-name">amy adams</h6>
+                        <p class="user-email">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate minus porro error!</p>
+                    </div>
+                </li>
+
+                <li class="user-card clearfix">
+                    <img src="assets/user_avatars/user_avatar_02.png" alt="user avatar" class="avatar layout__item--floated-left">
+                    <div class="user-data">
+                        <h6 class="user-name">Marc</h6>
+                        <p class="user-email">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate minus porro error!</p>
+                    </div>
+                </li>
+
+                <li class="user-card clearfix">
+                    <img src="assets/user_avatars/user_avatar_03.png" alt="user avatar" class="avatar layout__item--floated-left">
+                    <div class="user-data">
+                        <h6 class="user-name">Jacob</h6>
+                        <p class="user-email"></p>
+                    </div>
+                </li>
+
+                <li class="user-card clearfix">
+                    <img src="assets/user_avatars/user_avatar_04.png" alt="user avatar" class="avatar layout__item--floated-left">
+                    <div class="user-data">
+                        <h6 class="user-name">Chris Smith</h6>
+                        <p class="user-email">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati saepe porro vero? Quaerat, maiores molestiae!</p>
+                    </div>
+                </li>
+
+                <li class="user-card clearfix">
+                    <img src="assets/user_avatars/user_avatar_05.png" alt="user avatar" class="avatar layout__item--floated-left">
+                    <div class="user-data">
+                        <h6 class="user-name">Mia Wong</h6>
+                        <p class="user-email">Lorem ipsum dolor, sit amet consectetur.</p>
+                    </div>
+                </li>
+
+                <li class="user-card clearfix">
+                    <img src="assets/user_avatars/user_avatar_06.png" alt="user avatar" class="avatar layout__item--floated-left">
+                    <div class="user-data">
+                        <h6 class="user-name">Jane</h6>
+                        <p class="user-email">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque dolor quia consequatur voluptatibus distinctio.</p>
+                    </div>
+                </li>
+
+            </ul>
+
+            <button class="btn btn--new-contact" id="new-contact">Add new contact</button>
+
+        </div> <!-- Sidebar end -->
+
+        <div class="chat-interface layout__item--75-percent layout__item--floated-right"> <!-- Chat interface start-->
+
+            <header class="header layout__item--full-width ">
+                <a href="index.html" class="logo"><img src="assets/logo_50.svg" alt="logo"></a>
+            </header>
+
+            <div class="user-profile layout__item--75-percent layout__item--centered-horizontally  clearfix">
+
+                <div class="user--avatar-wrapper layout__item--33-percent-w-gutter layout__item--floated-left"> <!-- user--avatar-wrapper start-->
+
+                    <div id="selectedUser">
+                        
+                    </div>
+                    <div class="buttons">
+                        <button class="btn btn-edit" id="edit" ">edit profile</button>
+                        <button class="btn btn-delete" id="delete" >delete profile</button>
+                    </div>
+
+                        <ul class="list-items">
+                            <li class="list-item"><a href="#" class="link active">Profile</a></li>
+                            <li class="list-item"><a href="#" class="link">Task</a></li>
+                            <li class="list-item"><a href="#" class="link">Calendar</a></li>
+                            <li class="list-item"><a href="#" class="link">Files</a></li>
+                        </ul>
+                    
+
+                </div> <!-- user--avatar-wrapper end-->
+
+                <div class="user--info-wrapper layout__item--66-perent-w-gutter layout__item--floated-right"> <!-- user--info-wrapper start -->
+
+                    <div class="user--info-box"> <!-- user--info-pox start -->
+
+                        <span class="user--info-text">Amy spends most of their time on...</span>
+
+                        <div class="user--info-skills">
+                            <i class="fa-solid fa-database"></i>
+                            Product Infrsructure
+                        </div>
+
+                        <div class="user--info-skills">
+                            <i class="fa-solid fa-lock"></i>
+                            Network Security
+                        </div>
+
+                        <div class="user--info-skills">
+                            <i class="fa-solid fa-microscope"></i>
+                            Security Testing
+                        </div>
+
+                        <div class="user--info-skills">
+                            <i class="fa-solid fa-globe"></i>
+                            Security Audit Outsourcing
+                        </div>
+
+                        <div class="user--info-skills">
+                            <i class="fa-solid fa-bug"></i>
+                            Bugs
+                        </div>
+
+
+                        <form class="update-box" id="update-user">
+                            <h3>Update User</h3>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et </p>
+                            <input type="text" class="input-field" name="image" placeholder="image">
+                            <input type="text" class="input-field" name="name" placeholder="name">
+                            <input type="text" class="input-field" name="email" placeholder="email">
+                            <button class="btn add--user-btn">update user</button>
+                        </form>
+
+
+                    </div> <!--user--info-box end-->
+
+                   
+
+                </div><!--user--info-wrapper end -->
+                
+            </div>
+
+        </div> <!-- Chat interface end -->
+
+    </div>
+
+    <div class="add--user-container"> <!-- add user conatiner start-->
+
+        <form class="input-fields layout__item--33-percent-w-gutter" id="user-form">
+            <h3>Add User</h3>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et </p>
+            <input type="text" class="input-field" name="image" placeholder="image">
+            <input type="text" class="input-field" name="name" placeholder="name">
+            <input type="text" class="input-field" name="email" placeholder="email">
+            <button class="btn add--user-btn">add user</button>
+        </form>
+
+    </div> <!-- add user container end -->
+    
+    <script src="script.js"></script>
+</body>
+</html>

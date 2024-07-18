@@ -1,0 +1,34 @@
+
+
+.layout__item--full-width { width: 100%; }
+
+.layout__item--75-percent { width: 75%; }
+
+.layout__item--66-perent-w-gutter { width: calc(66% - 1.042vw); }
+
+
+.layout__item--33-percent-w-gutter { width: calc(33% - 1.042vw);  }
+
+.layout__item--25-percent { width: 25%; }
+
+
+
+.layout__item--centered-horizontally {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
+.layout__item--floated-left { float: left; }
+
+.layout__item--floated-right { float: right; }
+
+
+
+
+.clearfix:after {
+    content:  "";
+    display:  table;
+    clear:    both;
+  }
